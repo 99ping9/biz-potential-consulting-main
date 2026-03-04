@@ -1,12 +1,76 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biz Potential Consulting</title>
+    <title>Business Potential Consulting</title>
+    <!-- 폰트 적용 (Pretendard) -->
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Biz Potential Consulting 메인 페이지에 오신 것을 환영합니다!</h1>
-    <p>이곳은 메인 웹사이트입니다. Vercel 배포가 완료되었습니다.</p>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">Business Potential Consulting</div>
+            <nav class="nav">
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- 상단 웰컴 카드 (보내주신 사진의 상단 영역 느낌) -->
+        <section class="welcome-card card">
+            <h2>안녕하세요, 환영합니다! 👋</h2>
+            <p>비즈니스의 잠재력을 극대화하는 최적의 컨설팅 솔루션을 제공합니다.</p>
+
+            <div class="stats-container">
+                <div class="stat-box">
+                    <span class="stat-label">프로젝트 완료</span>
+                    <span class="stat-value text-blue">24건</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">진행중인 파트너</span>
+                    <span class="stat-value text-blue">8개사</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">고객 만족도</span>
+                    <span class="stat-value text-blue">4.9/5.0</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">누적 컨설팅 시간</span>
+                    <span class="stat-value text-blue">1,402시간</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 하단 영역 (보내주신 사진의 캘린더/리스트 영역 느낌) -->
+        <div class="grid-content">
+            <section class="card">
+                <h3>Our Services</h3>
+                <ul class="service-list">
+                    <li><span class="check-icon">✓</span> 비즈니스 모델 진단 및 개선</li>
+                    <li><span class="check-icon">✓</span> 맞춤형 디지털 전환(DX) 전략 수립</li>
+                    <li><span class="check-icon">✓</span> 데이터 기반 성과 최적화</li>
+                    <li><span class="check-icon">✓</span> 조직 문화 개선 컨설팅</li>
+                </ul>
+            </section>
+
+            <section class="card">
+                <h3>Family Services</h3>
+                <p class="notice-text">현재 웹사이트 리뉴얼 중입니다.<br>하위 서비스인 <strong>초원포레</strong> 시스템은 곧 연동될 예정입니다.</p>
+                <div class="tag-container">
+                    <span class="status-tag">준비중</span>
+                </div>
+                <button class="primary-btn mt-4">초원포레 바로가기 (준비중)</button>
+            </section>
+        </div>
+    </main>
 </body>
+
 </html>

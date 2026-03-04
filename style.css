@@ -1,0 +1,213 @@
+:root {
+    /* 보내주신 사진 느낌의 색상 팔레트 */
+    --bg-color: #f4f7fa; /* 옅은 그레이블루 배경 (사진의 기본 배경색 느낌) */
+    --card-bg: #ffffff;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --primary-blue: #3b82f6; /* 사진과 비슷한 밝은 파란색 계열 */
+    --primary-blue-hover: #2563eb;
+    --border-color: #e2e8f0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+/* 상단 헤더 */
+.header {
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.2rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    margin-left: 1.5rem;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+    font-weight: 500;
+}
+
+.nav a:hover {
+    color: var(--primary-blue);
+}
+
+/* 본문 레이아웃 */
+.main-content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* 카드 공통 스타일 */
+.card {
+    background-color: var(--card-bg);
+    border-radius: 16px; /* 둥근 모서리 */
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); /* 부드러운 그림자 */
+    border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.welcome-card h2 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.welcome-card p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+/* 통계/현황 박스 (사진 중앙의 네모난 박스들 느낌) */
+.stats-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.stat-box {
+    flex: 1;
+    min-width: 180px;
+    background-color: #f8fafc; /* 박스 안은 살짝 다른 회색 */
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.stat-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.4rem;
+    font-weight: 500;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.text-blue {
+    color: var(--primary-blue);
+}
+
+/* 하단 그리드 (캘린더/목록 있는 영역 느낌) */
+.grid-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1.5rem;
+}
+
+h3 {
+    font-size: 1.15rem;
+    margin-bottom: 1.2rem;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.service-list {
+    list-style: none;
+}
+
+.service-list li {
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+    background: #f8fafc;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+}
+
+.check-icon {
+    color: var(--primary-blue);
+    font-weight: bold;
+}
+
+.notice-text {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.tag-container {
+    margin-bottom: 1rem;
+}
+
+.status-tag {
+    background-color: #e0f2fe;
+    color: #0369a1;
+    padding: 0.2rem 0.6rem;
+    border-radius: 99px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* 버튼 스타일 */
+.mt-4 { margin-top: 1rem; }
+
+.primary-btn {
+    background-color: var(--text-primary);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px; /* 둥근 버튼 */
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 100%;
+}
+
+.primary-btn:hover {
+    background-color: #0f172a;
+    transform: translateY(-1px);
+}
