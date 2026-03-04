@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    {
+      "source": "/chowonforesms",
+      "destination": "https://your-chowonforesms-vercel-project-url.vercel.app"
+    },
+    {
+      "source": "/chowonforesms/:match*",
+      "destination": "https://your-chowonforesms-vercel-project-url.vercel.app/:match*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
