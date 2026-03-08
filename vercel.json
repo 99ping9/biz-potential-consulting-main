@@ -1,12 +1,24 @@
 {
   "rewrites": [
     {
-      "source": "/chowonforesms",
-      "destination": "https://your-chowonforesms-vercel-project-url.vercel.app"
+      "source": "/smsservice",
+      "destination": "https://smsservice-v2.vercel.app/smsservice"
     },
     {
-      "source": "/chowonforesms/:match*",
-      "destination": "https://your-chowonforesms-vercel-project-url.vercel.app/:match*"
+      "source": "/smsservice/:match*",
+      "destination": "https://smsservice-v2.vercel.app/smsservice/:match*"
+    },
+    {
+      "source": "/smsservice-gate",
+      "destination": "https://smsservice-v2.vercel.app/smsservice-gate"
+    },
+    {
+      "source": "/verify-gate",
+      "destination": "https://smsservice-v2.vercel.app/verify-gate"
+    },
+    {
+      "source": "/portal",
+      "destination": "https://smsservice-v2.vercel.app/portal"
     },
     {
       "source": "/(.*)",
